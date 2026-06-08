@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegant Head Lovers Prices</title>
-</head>
 
-
-<style>
+    <style>
         html {
             scroll-behavior: smooth;
         }
+
         body {
             margin: 0px;
             padding: 0px;
-            padding-top: 150px; /* To prevent content from being hidden behind the fixed header */
+            padding-top: 210px; /* Aligned with homepage to prevent overlap with the fixed header */
             font-family: Arial, sans-serif;
             background-color: #ffffff; /* Clean white base background to show the breaks */
         }
 
         /* --- RESPONSIVE HEADER --- */
         header {
-            position:fixed;
+            position: fixed;
             top: 0;
-            left:0;
+            left: 0;
             z-index: 1000;
-            background-color: #000000; 
+            background-color: #000000;
             width: 100%;
-            min-height: 150px; 
+            min-height: 150px;
             display: flex;
-            flex-direction: row; 
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             box-sizing: border-box;
-            padding: 20px; 
+            padding: 20px;
             border-bottom: 20px solid #ffffff;
         }
 
         .header-icon {
             height: 120px;
-            width: auto;   
+            width: auto;
             object-fit: contain;
         }
 
@@ -50,22 +48,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-grow: 1; 
+            flex-grow: 1;
         }
 
         .header-logo {
             height: auto;
-            max-height: 100px; 
+            max-height: 100px;
             width: 100%;
             max-width: 300px;
             object-fit: contain;
         }
 
         .center-branding p {
-            color: #b3b3b3; 
-            font-size: 14px; 
+            color: #b3b3b3;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 3px; 
+            letter-spacing: 3px;
             margin-top: 10px;
             text-align: center;
             line-height: 1.6;
@@ -73,36 +71,379 @@
 
         /* --- HEADER NAVIGATION LINKS --- */
         .center-branding p a {
-            color: #b3b3b3;                 
-            text-decoration: none;          
+            color: #b3b3b3;
+            text-decoration: none;
             font-size: 14px;
             font-weight: 300;
-            transition: color 0.3s ease;    
+            transition: color 0.3s ease;
         }
 
         .center-branding p a:hover {
-            color: #ad8913;                 
+            color: #ad8913;
         }
-</style>
+
+        /* --- PRICING SECTION CONTAINER --- */
+        .pricing-section {
+            background-color: #000000;
+            width: 100%;
+            max-width: 100%;
+            padding: 80px 0;
+            box-sizing: border-box;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 25px; /* Forced white break below section */
+        }
+
+        .pricing-section h1 {
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 0 0 20px 0;
+            font-weight: 300;
+        }
+
+        .pricing-subtitle {
+            color: #b3b3b3;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        /* --- PRICE GRID & CARDS --- */
+        .price-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 40px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background-color: #0b0b0b;
+            border: 1px solid #222222;
+            border-radius: 12px;
+            width: 280px;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            text-align: left;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            border-color: #ad8913;
+        }
+
+        .category-badge {
+            color: #ad8913;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .service-name {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .service-details {
+            font-size: 13px;
+            color: #b3b3b3;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            min-height: 60px; /* Keeps card layouts uniform */
+        }
+
+        .price-value {
+            font-size: 24px;
+            color: #ad8913;
+            font-weight: bold;
+            margin-top: auto;
+            border-top: 1px solid #222222;
+            padding-top: 15px;
+        }
+
+        .price-value span {
+            font-size: 12px;
+            color: #666666;
+            font-weight: normal;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERY --- */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 290px; /* Adjusts layout safely when header elements stack */
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .header-icon {
+                height: 100px;
+            }
+
+            .pricing-section {
+                margin-bottom: 20px;
+                padding: 60px 0;
+            }
+
+            .pricing-section h1 {
+                font-size: 32px;
+            }
+
+            .price-grid {
+                padding: 0 20px;
+            }
+
+            .price-card {
+                width: 100%; /* Stacks beautifully on mobile devices */
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column ul {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+
+        /* --- MAIN FOOTER SECTIONS --- */
+        .main-footer {
+            background-color: #0b0b0b;
+            border-top: 1px solid #ad8913;
+            color: #ffffff;
+            padding: 60px 20px 20px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            color: #ad8913;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-column h4 {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p {
+            color: #b3b3b3;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ad8913;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #666666;
+            font-size: 12px;
+            margin: 0;
+        }
+    </style>
+</head>
 
 <body>
 
     <header>
         <img src="elegant.jpg" alt="Elegant Head Lover's Salon Icon" class="header-icon">
-        
+
         <div class="center-branding">
             <img src="Title.jpg" alt="Elegant Head Lover's Salon Logo" class="header-logo">
             <p>
-                <a href="index.html">Home</a> &nbsp;|&nbsp; 
-                <a href="pricelist.html">Price List</a> &nbsp;|&nbsp; 
-                <a href="https://share.google/dlyObeRsXtDAq1iI9">Socials</a> &nbsp;|&nbsp; 
-                <a href="https://www.google.com/maps/dir//Elegant+Head+Lover's+Salon,+12B+Adderley+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9247104,18.4221696,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc6763da0fb943:0x31063bb7f074aa87!2m2!1d18.4238563!2d-33.9211669?hl=en-ZA&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">Location</a> &nbsp;|&nbsp; 
+                <a href="index.html">Home</a> &nbsp;|&nbsp;
+                <a href="pricelist.html">Price List</a> &nbsp;|&nbsp;
+                <a href="https://share.google/dlyObeRsXtDAq1iI9">Socials</a> &nbsp;|&nbsp;
+                <a href="https://www.google.com/maps/dir//Elegant+Head+Lover's+Salon,+12B+Adderley+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9247104,18.4221696,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc6763da0fb943:0x31063bb7f074aa87!2m2!1d18.4238563!2d-33.9211669?hl=en-ZA&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">Location</a> &nbsp;|&nbsp;
                 <a href="#contact-info">Contact Us</a>
             </p>
         </div>
     </header>
-    
-</body>
 
+    <!-- PRICING SECTION -->
+    <section class="pricing-section">
+        <h1>Services we offer &Prices</h1>
+        <div class="pricing-subtitle">Premium Menu Options</div>
+
+        <div class="price-grid">
+            
+            <!-- Card 1 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Hair Styling</span>
+                    <div class="service-name">Wig Installation</div>
+                    <div class="service-details">Flawless custom hair installs, frontals, and styling.</div>
+                </div>
+                <div class="price-value">From R450 <span>/ session</span></div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Hair Styling</span>
+                    <div class="service-name">Knotless Box Braids</div>
+                    <div class="service-details">Clean parts and lightweight braiding for both ladies and kids.</div>
+                </div>
+                <div class="price-value">From R650 <span>/ session</span></div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Gents & Barbershop</span>
+                    <div class="service-name">Miracle Fade & Cut</div>
+                    <div class="service-details">Premium precision clipper cuts, sharp lineups, and fresh fades.</div>
+                </div>
+                <div class="price-value">From R150 <span>/ haircut</span></div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Nails & Hands</span>
+                    <div class="service-name">Full Set Gel / Acrylic</div>
+                    <div class="service-details">Stunning curated nail art and professional extensions.</div>
+                </div>
+                <div class="price-value">From R350 <span>/ full set</span></div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Nails & Feet</span>
+                    <div class="service-name">Luxury Pedicure</div>
+                    <div class="service-details">Soaking, scrubbing, shaping, and premium polish finish.</div>
+                </div>
+                <div class="price-value">From R280 <span>/ session</span></div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">Glamour Makeup</span>
+                    <div class="service-name">Full Face Glam</div>
+                    <div class="service-details">Professional event makeup, lashes, and detail-oriented brow grooming.</div>
+                </div>
+                <div class="price-value">From R500 <span>/ session</span></div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="price-card">
+                <div>
+                    <span class="category-badge">VIP Treatment</span>
+                    <div class="service-name">The Royal Package</div>
+                    <div class="service-details">All-in-one execution, complimentary drinks, and private 1-on-1 styling.</div>
+                </div>
+                <div class="price-value">Custom <span>+ Lounge Fee</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER WITH ANCHOR TAG -->
+    <footer class="main-footer" id="contact-info">
+        <div class="footer-container">
+            <div class="footer-column brand-info">
+                <h3>Elegant Head Lovers</h3>
+                <p>Where elegance meets expertise. Experience premium hair, nail, and makeup services in the heart of Cape Town.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="careers.html">Careers at Elegant Head Lovers</a></li>
+                    <li><a href="tel:+27724467872">Book Appointment</a></li>
+                    <li><a href="https://www.google.com/maps/dir//Elegant+Head+Lover's+Salon,+12B+Adderley+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9247104,18.4221696,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc6763da0fb943:0x31063bb7f074aa87!2m2!1d18.4238563!2d-33.9211669?hl=en-ZA&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">Our Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>📍 <a href="https://www.google.com/maps/dir//Elegant+Head+Lover's+Salon,+12B+Adderley+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9247104,18.4221696,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc6763da0fb943:0x31063bb7f074aa87!2m2!1d18.4238563!2d-33.9211669?hl=en-ZA&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">Cape Town CBD (Opposite the Train Station)</a></li>
+                    <li>📞 <a href="tel:+27724467872" class="footer-link">+27 (0)72 446 7872</a></li>
+                    <li>✉️ <a href="mailto:osondoebere@gmail.com" class="footer-link">osondoebere@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Elegant Head Lovers Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
 
 </html>

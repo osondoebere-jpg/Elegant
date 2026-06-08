@@ -15,7 +15,7 @@
         body {
             margin: 0px;
             padding: 0px;
-            padding-top: 150px; /* To prevent content from being hidden behind the fixed header */
+            padding-top: 210px; /* Increased to prevent content from being hidden behind the fixed header */
             font-family: Arial, sans-serif;
             background-color: #ffffff; /* Clean white base background to show the breaks */
         }
@@ -223,6 +223,10 @@
 
         /* --- RESPONSIVE MEDIA QUERY --- */
         @media (max-width: 768px) {
+            body {
+                padding-top: 290px; /* Adjusts layout flow safely when the header goes multi-line */
+            }
+
             header {
                 flex-direction: column; 
                 gap: 20px;
