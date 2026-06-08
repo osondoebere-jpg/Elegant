@@ -11,30 +11,31 @@
             scroll-behavior: smooth;
         }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    padding-top: 0px; /* Reset to 0 by default for mobile screens */
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-}
+        body {
+            margin: 0px;
+            padding: 0px;
+            padding-top: 210px; /* Aligned with homepage to prevent overlap with the fixed header */
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Clean white base background to show the breaks */
+        }
 
-header {
-    position: static; /* It will now scroll away on mobile screens */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #000000;
-    width: 100%;
-    min-height: 150px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 20px;
-    border-bottom: 20px solid #ffffff;
-}
+        /* --- RESPONSIVE HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: #000000;
+            width: 100%;
+            min-height: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 20px;
+            border-bottom: 20px solid #ffffff;
+        }
 
         .header-icon {
             height: 120px;
@@ -332,7 +333,7 @@ header {
 
     <!-- PRICING SECTION -->
     <section class="pricing-section">
-        <h1>Services we offer &Prices</h1>
+        <h1>Our Menu & Prices</h1>
         <div class="pricing-subtitle">Premium Menu Options</div>
 
         <div class="price-grid">
