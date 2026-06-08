@@ -7,15 +7,25 @@
     <title>Elegant Head Lovers Salon</title>
 
     <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0px;
             padding: 0px;
+            padding-top: 150px; /* To prevent content from being hidden behind the fixed header */
             font-family: Arial, sans-serif;
             background-color: #ffffff; /* Clean white base background to show the breaks */
         }
 
         /* --- RESPONSIVE HEADER --- */
         header {
+            position:fixed;
+            top: 0;
+            left:0;
+            z-index: 1000;
             background-color: #000000; 
             width: 100%;
             min-height: 150px; 
@@ -25,7 +35,7 @@
             justify-content: space-between;
             box-sizing: border-box;
             padding: 20px; 
-            margin-bottom: 25px; /* FORCED WHITE BREAK BELOW HEADER */
+            border-bottom: 20px solid #ffffff;
         }
 
         .header-icon {
@@ -344,10 +354,10 @@
             <img src="Title.jpg" alt="Elegant Head Lover's Salon Logo" class="header-logo">
             <p>
                 <a href="index.html">Home</a> &nbsp;|&nbsp; 
-                <a href="PriceList.html">Price List</a> &nbsp;|&nbsp; 
-                <a href="Socials.html">Socials</a> &nbsp;|&nbsp; 
-                <a href="Location.html">Location</a> &nbsp;|&nbsp; 
-                <a href="ContactUs.html">Contact Us</a>
+                <a href="pricelist.html">Price List</a> &nbsp;|&nbsp; 
+                <a href="https://share.google/dlyObeRsXtDAq1iI9">Socials</a> &nbsp;|&nbsp; 
+                <a href="https://www.google.com/maps/dir//Elegant+Head+Lover's+Salon,+12B+Adderley+St,+Cape+Town+City+Centre,+Cape+Town,+8000/@-33.9247104,18.4221696,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcc6763da0fb943:0x31063bb7f074aa87!2m2!1d18.4238563!2d-33.9211669?hl=en-ZA&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">Location</a> &nbsp;|&nbsp; 
+                <a href="#contact-info">Contact Us</a>
             </p>
         </div>
     </header>
@@ -413,7 +423,8 @@
         </div>
     </section>
 
-    <footer class="main-footer">
+    <!-- Add id="contact-info" to the tag -->
+    <footer class="main-footer" id="contact-info">
         <div class="footer-container">
             <div class="footer-column brand-info">
                 <h3>Elegant Head Lovers</h3>
@@ -433,7 +444,7 @@
             <div class="footer-column">
                 <h4>Contact Us</h4>
                 <p>📍 Cape Town CBD (Opposite the Train Station)</p>
-                <p>📞 +27 (0)21 123 4567</p>
+                <p>📞 +27 (0)72 446 7872</p>
                 <p>✉️ info@elegantheadlovers.co.za</p>
             </div>
         </div>
