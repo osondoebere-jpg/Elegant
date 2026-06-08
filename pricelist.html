@@ -183,31 +183,51 @@ header {
             color: #666666;
             font-weight: normal;
         }
-/* --- RESPONSIVE ADJUSTMENTS FOR WIDER SCREENS (DESKTOP) --- */
-@media (min-width: 769px) {
-    header {
-        position: fixed; /* Header stays locked down only on desktop */
-    }
-    body {
-        padding-top: 210px; /* Pushes content down past the fixed desktop header */
-    }
-}
 
-/* --- RESPONSIVE ADJUSTMENTS FOR SMALLER SCREENS (MOBILE) --- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+        /* --- RESPONSIVE MEDIA QUERY --- */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 290px; /* Adjusts layout safely when header elements stack */
+            }
 
-    .header-icon {
-        height: 100px;
-    }
-    
-    /* Notice: body padding-top is completely gone here because the header scrolls naturally! */
-}
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .header-icon {
+                height: 100px;
+            }
+
+            .pricing-section {
+                margin-bottom: 20px;
+                padding: 60px 0;
+            }
+
+            .pricing-section h1 {
+                font-size: 32px;
+            }
+
+            .price-grid {
+                padding: 0 20px;
+            }
+
+            .price-card {
+                width: 100%; /* Stacks beautifully on mobile devices */
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column ul {
+                display: inline-block;
+                text-align: center;
+            }
+        }
 
         /* --- MAIN FOOTER SECTIONS --- */
         .main-footer {

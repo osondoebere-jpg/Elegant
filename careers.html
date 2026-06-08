@@ -11,30 +11,31 @@
             scroll-behavior: smooth;
         }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    padding-top: 0px; /* Reset to 0 by default for mobile screens */
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-}
+        body {
+            margin: 0px;
+            padding: 0px;
+            padding-top: 210px; /* Aligned with homepage/pricelist to prevent overlap with the fixed header */
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Clean white base background to show the breaks */
+        }
 
-header {
-    position: static; /* It will now scroll away on mobile screens */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #000000;
-    width: 100%;
-    min-height: 150px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 20px;
-    border-bottom: 20px solid #ffffff;
-}
+        /* --- RESPONSIVE HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: #000000;
+            width: 100%;
+            min-height: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 20px;
+            border-bottom: 20px solid #ffffff;
+        }
 
         .header-icon {
             height: 120px;
@@ -193,31 +194,50 @@ header {
             font-weight: normal;
         }
 
-        /* --- RESPONSIVE ADJUSTMENTS FOR WIDER SCREENS (DESKTOP) --- */
-@media (min-width: 769px) {
-    header {
-        position: fixed; /* Header stays locked down only on desktop */
-    }
-    body {
-        padding-top: 210px; /* Pushes content down past the fixed desktop header */
-    }
-}
+        /* --- RESPONSIVE MEDIA QUERY --- */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 290px; /* Adjusts layout safely when header elements stack */
+            }
 
-/* --- RESPONSIVE ADJUSTMENTS FOR SMALLER SCREENS (MOBILE) --- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
 
-    .header-icon {
-        height: 100px;
-    }
-    
-    /* Notice: body padding-top is completely gone here because the header scrolls naturally! */
-}
+            .header-icon {
+                height: 100px;
+            }
+
+            .career-section {
+                margin-bottom: 20px;
+                padding: 60px 0;
+            }
+
+            .career-section h1 {
+                font-size: 32px;
+            }
+
+            .career-grid {
+                padding: 0 20px;
+            }
+
+            .career-card {
+                width: 100%; /* Stacks beautifully on mobile devices */
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column ul {
+                display: inline-block;
+                text-align: center;
+            }
+        }
 
         /* --- MAIN FOOTER SECTIONS --- */
         .main-footer {
